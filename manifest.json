@@ -5,7 +5,7 @@
   "version": "1.0",
   "homepage_url": "https://github.com/sinc0115/web-pub-qa",
   "icons": {
-    "48": "icon/material-48.png"
+    "48": "icon/outline_highlight_black_48dp.png"
   },
 
   "content_scripts": [
