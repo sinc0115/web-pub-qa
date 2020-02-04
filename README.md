@@ -9,3 +9,8 @@ Web extension to QA Canada.ca websites.
 * Find ampersands (&)
 * Find "numbers" (#, No.)
 * Find br tags
+* Find headers
+
+## Future Features
+* Identify list items that end with punctuation
+* Identify headers that are not sentence case
