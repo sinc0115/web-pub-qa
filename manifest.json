@@ -1,0 +1,18 @@
+{
+  "description": "QA common style mistakes for Canada.ca style guide.",
+  "manifest_version": 2,
+  "name": "WebPubQA",
+  "version": "1.0",
+  "homepage_url": "https://github.com/sinc0115/web-pub-qa",
+  "icons": {
+    "48": "icon/material-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["webPubQA.js"]
+    }
+  ]
+
+}
