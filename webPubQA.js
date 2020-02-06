@@ -7,12 +7,15 @@ console.log($textyText)
 const $text = $textyText.textContent
 console.log($text)
 
-
-// BROKEN
 // Finds word in text content
 var $makeItBlue = $text.match(/lorem/g)
-console.log($makeitBlue)
-//BROKEN
+console.log($makeItBlue)
+
+
+// Find a way to do this in JS
+//// Add highlight
+$makeItBlue.innerHTML = '<span style="background-color: blue">' + $makeItBlue + '</span>'
+//
 
 
 // Finds all list elements
