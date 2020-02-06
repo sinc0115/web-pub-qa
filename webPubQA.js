@@ -1,3 +1,20 @@
+// Grabs the body element
+const $textyText = document.querySelector('body')
+console.log($textyText)
+
+
+//Grabs the text content of the body
+const $text = $textyText.textContent
+console.log($text)
+
+
+// BROKEN
+// Finds word in text content
+var $makeItBlue = $text.match(/lorem/g)
+console.log($makeitBlue)
+//BROKEN
+
+
 // Finds all list elements
 $ulList = document.querySelectorAll('ul')
 $olList = document.querySelectorAll('ol')
