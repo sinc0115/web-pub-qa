@@ -13,6 +13,16 @@
       "matches": ["<all_urls>"],
       "js": ["webPubQA.js"]
     }
-  ]
+  ],
+  
+   "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon/outline_highlight_black_48dp.png",
+    "default_title": "Web Pub QA",
+    "default_popup": "index-pop.html"
+  }
 
 }
