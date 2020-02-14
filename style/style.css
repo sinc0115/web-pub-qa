@@ -1,0 +1,25 @@
+/*************************
+	POPUP
+*************************/
+main {
+	font-family: arial;
+	background-color: #fafafa;
+	border: solid 2px white;
+	padding: 1rem 2rem;
+}
+
+main p {
+	font-weight: 600;
+}
+
+.count {
+	background-color: yellow;
+}
+
+/************************
+	IN PAGE QA
+************************/
+.highlight {
+	background-color: yellow;
+	font-weight: bold;
+}
