@@ -1,35 +1,47 @@
 // Grabs the body element
-const $textyText = document.querySelector('body')
-console.log($textyText)
-
-
-//Grabs the text content of the body
-const $text = $textyText.textContent
-console.log($text)
+var text = document.body.textContent
+console.log(text)
 
 // Finds word in text content
-var $makeItBlue = $text.match(/lorem/g)
-console.log($makeItBlue)
+var $makeItBlue = text.match(/lorem/g)
+console.log('Heres your lorems: ' + $makeItBlue)
 
 
-// Find a way to do this in JS
-//// Add highlight
-$makeItBlue.innerHTML = '<span style="background-color: blue">' + $makeItBlue + '</span>'
-//
+// Highlights all instances of 'lorem'
+//// BROKEN captures '&' in HTML as well, breaking page
+highlight();
+function highlight(){
+    if (document.readyState === "complete") {
+        document.body.innerHTML = document.body.innerHTML.replace(/\&amp;/g, '<span class="highlight">&</span>');
+    } else {
+        setTimeout('highlight();', 500)
+    }
+}
+
 
 
 // Finds all list elements
-$ulList = document.querySelectorAll('ul')
-$olList = document.querySelectorAll('ol')
-$dlList = document.querySelectorAll('dl')
+const $ulList = document.querySelectorAll('ul')
+const $olList = document.querySelectorAll('ol')
+const $dlList = document.querySelectorAll('dl')
 
 // Gives them a pink border
-for ($ul of $ulList) {
+for (const $ul of $ulList) {
 	$ul.style.border = "5px solid pink";
 }
-for ($ol of $olList) {
+for (const $ol of $olList) {
 	$ol.style.border = "5px solid pink";
 }
-for ($dl of $dlList) {
-	$dl.style.border = "5px solid pink";
+for (const $dl of $dlList) {
+	$dl.style.border = "5px solid hotpink";
 }
+
+
+
+// To display number of "lorems" on page, in popup
+/// Needs to be connected to popup, only displays in console right now
+var $loremCount = document.querySelector('.lorem-count')
+// var $loremCount.textContent = document.querySelector('.lorem-count')
+
+$loremCount = $makeItBlue.length
+console.log('Lorem Count: ' + $loremCount)
