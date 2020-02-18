@@ -11,13 +11,17 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["webPubQA.js"]
+      "js": ["webPubQA.js", "pop-display.js"]
     }
   ],
   
    "permissions": [
     "activeTab"
   ],
+  
+  "background": {
+		"scripts": ["pop-display.js"]
+	},
 
   "browser_action": {
     "default_icon": "icon/outline_highlight_black_48dp.png",
